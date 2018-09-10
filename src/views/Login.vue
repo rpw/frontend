@@ -1,8 +1,6 @@
 <template>
   <div id="login" :class="{ recaptcha: recaptcha.length > 0 }">
     <form @submit="submit">
-      <img src="../assets/logo.svg" alt="File Browser">
-      <h1>File Browser</h1>
       <div v-if="wrong" class="wrong">{{ $t("login.wrongCredentials") }}</div>
       <input type="text" v-model="username" :placeholder="$t('login.username')">
       <input type="password" v-model="password" :placeholder="$t('login.password')">
